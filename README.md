@@ -1,6 +1,9 @@
-1. Compile message.proto to C++ objects
-2. Create a static library libmessage cpmposed of message source and header files
-3. Use the symbols from libmessage in main.cpp - create a message object, set some fields and display it as a string
+Requirements
+
+Build and install following from source:
+
+1. grpc (also installs protobuf as dependency)
+2. Poco (Make sure latest release tag is used, else 'Crypto' package may not be included)
 
 ```
 rm -rf build && mkdir build && cd build

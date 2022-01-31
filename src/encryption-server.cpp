@@ -1,5 +1,5 @@
 #include "encryptor.hpp"
-#include "proto/encryptor.grpc.pb.h"
+#include "encryptorservice.grpc.pb.h"
 #include <grpcpp/grpcpp.h>
 #include <iostream>
 #include <string>
@@ -9,9 +9,9 @@ using grpc::ServerBuilder;
 using grpc::ServerContext;
 using grpc::Status;
 
-using encryptor::MD5Encrypt;
-using encryptor::RequestMessage;
-using encryptor::ResponseMessage;
+using encryptorservice::MD5Encrypt;
+using encryptorservice::RequestMessage;
+using encryptorservice::ResponseMessage;
 
 // Server Implementation
 class EncryptionServiceImpl final : public MD5Encrypt::Service {

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package encryptor;
+package encryptorservice;
 
 service MD5Encrypt {
   rpc sendRequest(RequestMessage) returns (ResponseMessage) {}
