@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package encryptor;
+
+service MD5Encrypt {
+  rpc sendRequest(RequestMessage) returns (ResponseMessage) {}
+}
+
+message RequestMessage { string message = 1; }
+
+message ResponseMessage { string encrypted = 1; }

@@ -3,6 +3,8 @@
 #include <google/protobuf/util/json_util.h>
 #include <iostream>
 
+#include "encryptor.hpp"
+
 int main() {
   message::Message m;
   m.set_id(10);
@@ -23,4 +25,8 @@ int main() {
   std::string s3;
   google::protobuf::util::MessageToJsonString(m, &s3);
   std::cout << "Message as json: " << s3 << std::endl;
+
+  Message::Encryption::MD5Engine md5encryptor;
+  std::cout << "Encrypted message "
+            << md5encryptor.encrypt("abcdefghijklmnopqrstuvwxyz") << std::endl;
 }
